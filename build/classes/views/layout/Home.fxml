@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.layout.HomeController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #323232;">
+               <children>
+                  <AnchorPane fx:id="pane" maxWidth="1200.0" minWidth="650.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1000.0" style="-fx-background-color: #323232;">
+                     <children>
+                        <AnchorPane layoutX="59.0" layoutY="122.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="100.0">
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="35.0" layoutY="62.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER">
+                                       <children>
+                                          <Label text="Adjacency Matrix" textFill="#0d7377">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #212121;">
+                                             <content>
+                                                <VBox fx:id="adjTable" alignment="TOP_CENTER" prefWidth="100.0" style="-fx-background-color: #212121;" />
+                                             </content>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </ScrollPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Dijkstra's analysis" textFill="#0d7377">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #212121;">
+                                             <content>
+                                                <VBox fx:id="data" alignment="TOP_CENTER" prefWidth="100.0" style="-fx-background-color: #212121;" />
+                                             </content>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </ScrollPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="672.0" layoutY="500.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="520.0">
+                           <effect>
+                              <DropShadow color="#0d727533" />
+                           </effect>
+                           <children>
+                              <HBox layoutX="50.0" layoutY="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <JFXButton fx:id="selectDest" text="select dest" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="MAP_MARKER" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="selectStart" text="Select Start" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="STREET_VIEW" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="reset" text="Reset" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="REPEAT" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="play" text="Calc" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="PLAY" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <Label layoutY="-226.0" text="Destination :" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="startName" layoutX="105.0" layoutY="-226.0" text="_" textFill="#0d7377" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="125.0" layoutY="-226.0" text="Path :" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="110.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="path" layoutX="170.0" layoutY="-226.0" text="_" textFill="#0d7377" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="110.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="158.0" layoutY="-211.0" text="Start point : " textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destName" layoutX="258.0" layoutY="-211.0" text="_" textFill="#0d7377" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="210.0" layoutY="80.0" text="Cost :" textFill="WHITE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cost" layoutX="165.0" layoutY="80.0" text="_" textFill="#0d7377" AnchorPane.leftAnchor="405.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="171.0" layoutY="50.0" text="Work Space" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="30.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="TOP_CENTER" layoutX="335.0" layoutY="-70.0" prefHeight="100.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="alert" opacity="0.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" text="Label" textFill="#14ffec">
+                                 <padding>
+                                    <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
