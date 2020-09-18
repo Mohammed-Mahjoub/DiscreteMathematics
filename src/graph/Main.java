@@ -14,7 +14,7 @@ import javafx.stage.StageStyle;
  * @author Khader
  */
 public class Main extends Application {
-//kfvhhkvhkvhkvhkabsnckankanckcnmkm
+
     private static Stage stage;
     final private static Router ROUTER = new Router();
     final private static String COMPONENTS_PATH = "/views/";
